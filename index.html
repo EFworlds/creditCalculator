@@ -103,36 +103,35 @@
       </datalist>
         
         <div class="output">
-          <div class="out1">
-          <label for="amount">Сумма кредита (грн): </label>
-          <span id="rangeValue">0</span>
-        </div>
-        <div class="out2">
-          <label for="interest">Процентная ставка кредита: </label>
-          <span id="interestValue">0</span>
-        </div>
-        <div class="out3">
-          <label for="term">Срок кредита (месяцев): </label>
-          <span id="termValue">0</span>
-        </div>
-        <table>
-          <tr><th colspan="2">Платежи:</th></tr>
-          <tr><td>Месячный платеж:</td>
-              <td>Грн.<span id="payment"></span></td></tr>
-          <tr><td>Все платежи:</td>
-              <td>Грн.<span id="total"></span></td></tr>
-          <tr><td>Сумма всех процентов:</td>
-              <td>Грн.<span id="totalinterest"></span></td></tr>
-        </table>
+                <div class="out1">
+                <label for="amount">Сумма кредита (грн): </label>
+                <span id="rangeValue">0</span>
+              </div>
+              <div class="out2">
+                <label for="interest">Процентная ставка кредита: </label>
+                <span id="interestValue">0</span>
+              </div>
+              <div class="out3">
+                <label for="term">Срок кредита (месяцев): </label>
+                <span id="termValue">0</span>
+              </div>
+              <table>
+                <tr><th colspan="2">Платежи:</th></tr>
+                <tr><td>Месячный платеж:</td>
+                    <td><span id="payment"></span> грн.</td></tr>
+                <tr><td>Все платежи:</td>
+                    <td><span id="total"></span> грн.</td></tr>
+                <tr><td>Сумма всех процентов:</td>
+                    <td><span id="totalinterest"></span> грн.</td></tr>
+              </table>
+
+              <div>
+                <button onclick="detail()">Подробный расчет</button>
+              </div>
+              <div id="detailReport"></div>
         </div>
     </div>
 
-
   </div>
-
-
-
-
-
 </body>
 </html>
