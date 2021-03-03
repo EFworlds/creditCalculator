@@ -1,0 +1,17 @@
+.slider-wrapper {
+    display: inline-block;
+    width: 500px;
+    height: 55px;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .slider-wrapper input {
+    width: 450px;
+    height: 50px;
+    margin: 0;
+  }
+  .output{
+    display: flex;
+    flex-direction: column;
+  }

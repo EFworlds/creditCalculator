@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="./assets/script.js"></script>
+    <title>Document</title>       
+</head>
+<body onload="calculation()">
+  <div class="container">
+    <div class="radioButtons">
+      <h4>Выберите величину кредита</h4>
+      <div class="form_radio">
+        <input id="radio-1" type="radio" name="radio" value="1" checked onclick="calculation()">
+        <label for="radio-1">1 000 - 10 000</label>
+      </div>
+       
+      <div class="form_radio">
+        <input id="radio-2" type="radio" name="radio" value="2" onclick="calculation()">
+        <label for="radio-2">10 000 - 100 000</label>
+      </div>      
+      <div class="form_radio">
+        <input id="radio-3" type="radio" name="radio" value="3" onclick="calculation()">
+        <label for="radio-2">100 000 - 1 000 000</label>
+      </div>      
+    </div>
+  
+    <div class="slider-wrapper">
+      <p>Выберите сумму кредита</p>
+            <input id="amount" type="range" list="amountMarks" min="1" max="10" step="0.5" value="1" oninput="calculation()">
+            <datalist id="amountMarks">
+                <option value="0" label="0%">
+                <option value="0.5">
+                <option value="1.5">
+                <option value="2">
+                <option value="2.5">
+                <option value="3">
+                <option value="3.5">
+                <option value="4">
+                <option value="4.5">
+                <option value="5">
+                <option value="5.5">
+                <option value="6">
+                <option value="6.5">                
+                <option value="7">
+                <option value="7.5">
+                <option value="8">
+                <option value="8.5">
+                <option value="9">
+                <option value="9.5">
+                <option value="10" label="100%">
+            </datalist>
+        
+            <p>Выберите процентную ставку кредита</p>
+            <input id="interest" type="range" list="interestMarks" min="1" max="10" step="0.5" value="1" oninput="calculation()">
+            <datalist id="interestMarks">
+              <option value="1" label="0%">
+              <option value="1.5">              
+              <option value="2">
+              <option value="2.5" >
+              <option value="3">
+              <option value="3.5">
+              <option value="4">
+              <option value="4.5">
+              <option value="5" label="50%">
+              <option value="5.5">
+              <option value="6">
+              <option value="6.5">
+              <option value="7">
+              <option value="7.5">
+              <option value="8">
+              <option value="8.5">
+              <option value="9">
+              <option value="9.5">
+              <option value="10" label="100%">
+          </datalist>
+        
+          <p>Выберите срок кредита</p>
+        <input id="term" type="range" list="termMarks" min="1" max="20" step="1" value="1" oninput="calculation()">
+        <datalist id="termMarks">
+          <option value="1" label="0%">
+          <option value="2">         
+          <option value="3">          
+          <option value="4">          
+          <option value="5" >          
+          <option value="6">          
+          <option value="7">          
+          <option value="8">          
+          <option value="9">          
+          <option value="10" label="50%">
+          <option value="11">
+          <option value="12">
+          <option value="13">
+          <option value="14">
+          <option value="15">
+          <option value="16">
+          <option value="17">
+          <option value="18">
+          <option value="19">
+          <option value="20" label="100%">          
+      </datalist>
+        
+        <div class="output">
+          <div class="out1">
+          <label for="amount">Сумма кредита (грн): </label>
+          <span id="rangeValue">0</span>
+        </div>
+        <div class="out2">
+          <label for="interest">Процентная ставка кредита: </label>
+          <span id="interestValue">0</span>
+        </div>
+        <div class="out3">
+          <label for="term">Срок кредита (месяцев): </label>
+          <span id="termValue">0</span>
+        </div>
+        <table>
+          <tr><th colspan="2">Платежи:</th></tr>
+          <tr><td>Месячный платеж:</td>
+              <td>Грн.<span id="payment"></span></td></tr>
+          <tr><td>Все платежи:</td>
+              <td>Грн.<span id="total"></span></td></tr>
+          <tr><td>Сумма всех процентов:</td>
+              <td>Грн.<span id="totalinterest"></span></td></tr>
+        </table>
+        </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+</body>
+</html>
